@@ -1,0 +1,110 @@
+.contentDetails_container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+
+  
+   
+}
+
+.movie_header{
+
+    
+
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50%;
+   
+    
+ 
+    
+}
+
+.overlay{
+    
+    background: linear-gradient(180deg, rgba(14, 0, 20, 0.375) 0%, rgba(0,0,0,1) 95%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 10px;
+}
+
+
+.right_container{
+    height: 50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 5rem;
+    width: 100%;
+   
+   
+
+
+   
+  
+
+}
+
+.genres_container{
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    
+    
+}
+
+.genres{
+    background: linear-gradient(264deg, rgba(44,148,247,1) 11%, rgba(23,66,208,1) 100%);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.rate_container{
+    display: flex;
+    gap: 25px;
+}
+
+.rate{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    padding: 7.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 100%;
+}
+
+.bottom_container{
+    display: flex;
+    gap: 10px;
+}
+
+.info_container{
+
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    border: 2.5px solid rgba(23,66,208,1);
+    border-radius: 15px;
+    width: 30rem;
+}
+
+.overview_container{
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    border: 2.5px solid rgba(23,66,208,1);
+    border-radius: 15px;
+    width: 50rem;
+}
