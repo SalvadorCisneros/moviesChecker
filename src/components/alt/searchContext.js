@@ -9,6 +9,12 @@ export const SearchProvider = ({ children }) => {
   return (
     <SearchContext.Provider value={{ searchValue, setSearchValue }}>
       {children}
+  
+      
     </SearchContext.Provider>
+
+    
+
+    
   );
 };

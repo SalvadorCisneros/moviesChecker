@@ -2,11 +2,14 @@
 
 *{
   font-family: "Inter", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: black;
+  background: linear-gradient(117deg, rgb(16, 15, 22) 25%, rgba(0,0,0,1) 100%);
   margin: 0;
+
   
 }
 

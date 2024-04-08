@@ -1,9 +1,10 @@
 .contentDetails_container{
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    margin: 0;
+
     justify-content: center;
-    height: 100vh;
+    align-items: center;
+    height: 85vh;
 
   
    
@@ -11,51 +12,51 @@
 
 .movie_header{
 
-    
-
-    width: 100%;
-    background-size: cover;
+    width: 40%;
+    height: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 50%;
-   
-    
- 
-    
-}
-
-.overlay{
-    
-    background: linear-gradient(180deg, rgba(14, 0, 20, 0.375) 0%, rgba(0,0,0,1) 95%);
-    width: 100%;
-    display: flex;
+    background-position: center;
+    border-radius: 2px;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    gap: 10px;
+   
+    
+   
+    
+       
 }
 
 
-.right_container{
-    height: 50%;
+
+
+.middle_container{
+    height: 100%;
+    width: 40%;
     display: flex;
-    align-items: flex-start;
+  
     justify-content: flex-start;
     flex-direction: column;
-    gap: 5rem;
-    width: 100%;
-   
+    gap: 15px;
    
 
 
-   
-  
 
+   
+   
+}
+
+.title_container{
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
 .genres_container{
     display: flex;
     gap: 10px;
     align-items: flex-start;
+    flex-wrap: wrap;
     
     
 }
@@ -63,13 +64,10 @@
 .genres{
     background: linear-gradient(264deg, rgba(44,148,247,1) 11%, rgba(23,66,208,1) 100%);
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
-.rate_container{
-    display: flex;
-    gap: 25px;
-}
+
 
 .rate{
     width: 40px;
@@ -83,28 +81,51 @@
     font-size: 100%;
 }
 
-.bottom_container{
-    display: flex;
-    gap: 10px;
-}
-
-.info_container{
-
-    display: flex;
-    padding: 15px;
-    flex-direction: column;
-    gap: 10px;
-    border: 2.5px solid rgba(23,66,208,1);
-    border-radius: 15px;
-    width: 30rem;
-}
-
 .overview_container{
     display: flex;
-    padding: 15px;
     flex-direction: column;
     gap: 10px;
-    border: 2.5px solid rgba(23,66,208,1);
-    border-radius: 15px;
-    width: 50rem;
+    height: 250px;
+    
 }
+
+.video_container{
+   
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:bottom;
+    cursor: pointer;
+    filter:grayscale(0.5) ;
+    
+   
+
+}
+
+.playButton{
+    width: 64px;
+}
+
+
+@media screen and ( max-width: 768px) {
+    .contentDetails_container{
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .movie_header{
+        display: none;
+       
+    }
+
+    .middle_container{
+        height: 100%;
+        width: 100%;
+    }
+    
+}
+
+

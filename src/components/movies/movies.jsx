@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import './movies.css';
 import { useNavigate } from 'react-router-dom';
+
+
 
 export default function Movies({ url }) {
   const [data, setData] = useState([]);
@@ -33,7 +35,8 @@ export default function Movies({ url }) {
       {data && data.map((item, index) => (
         <div key={index} className='movie_cast'>
           {item.poster_path ? (
-<img className='movie' src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} onClick={() => movieDetails(item.media_type,item.id)} alt={item.title || item.name}/>
+            
+            <img className='movie' src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} onClick={() => movieDetails(item.media_type,item.id)} alt={item.title || item.name}/>
           ) : (
             null
           )}
