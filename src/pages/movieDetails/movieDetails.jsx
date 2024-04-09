@@ -1,16 +1,11 @@
-import React, { useEffect, useState, useContext} from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './movieDetails.css';
 import playButton from '../../img/play.png';
-import Movies from '../../components/movies/movies';
-import TitleFS from '../../components/titleForSection/titleFS';
-import { SearchContext } from '../../components/alt/searchContext';
 
 export default function MovieDetails() {
-  const { searchValue } = useContext(SearchContext);
   const { media, id } = useParams();
   const [contentDetails, setContentDetails] = useState(null);
-
 
 
   useEffect(() => {
@@ -44,7 +39,7 @@ export default function MovieDetails() {
 
   return (
     <div>
-      {searchValue === '' && contentDetails ? (
+      {contentDetails && (
         <div className='contentDetails_container'>
           <div className='movie_header' style={{backgroundImage: `url(https://image.tmdb.org/t/p/original/${contentDetails.poster_path})`}}>
       
@@ -78,12 +73,6 @@ export default function MovieDetails() {
 
 
           
-        </div>
-       ) : (
-        <div >
-          <TitleFS title={searchValue}/>
-          <Movies url={`https://api.themoviedb.org/3/search/multi?query=${searchValue}&include_adult=false&language=en-US&page=1`} />
-        
         </div>
       )}
     </div>

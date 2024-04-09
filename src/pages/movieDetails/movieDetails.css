@@ -50,7 +50,9 @@
     display: flex;
     gap: 15px;
     align-items: center;
+    font-size: 0.9rem;
 }
+
 
 .genres_container{
     display: flex;
@@ -87,7 +89,10 @@
     gap: 10px;
     height: 250px;
     
+    
 }
+
+
 
 .video_container{
    
@@ -114,6 +119,22 @@
     .contentDetails_container{
         flex-direction: column;
         margin-top: 10px;
+    }
+
+   
+
+    .overview_container{
+        height: 150px;
+    }
+
+    .title_container{
+        padding: 0;
+    }
+
+    
+
+    .overview_container p{
+        overflow-y: scroll;
     }
 
     .movie_header{

@@ -4,10 +4,12 @@
     display: flex;
     width: 100%;
     color: white;
-    flex-direction: column;
+    flex-direction: row;
     overflow: scroll;
     overflow-y: hidden;
     align-items: start;
+    position: relative;
+    scroll-behavior: smooth;
     
     
 
@@ -72,6 +74,41 @@
     padding-bottom: 25px;
 }
   
+.right_button{
+    position: sticky;
+    width: 200px;
+    height: 320px;
+    right: 0; 
+    z-index: 3;
+    background-color: #01010197;
+    border: none;
+    padding: 0 25px;
+    
+    
+}
+
+.right_button img{
+    width: 32px;
+    filter: invert(1);
+}
+.left_button{
+    position: sticky;
+    width: 200px;
+    height: 320px;
+    left: 0; 
+    z-index: 3;
+    background-color: #01010197;
+    border: none;
+    padding: 0 25px;
+    
+    
+}
+
+.left_button img{
+    width: 32px;
+    filter: invert(1);
+}
+    
 
   @media screen and (max-width:768px){
 
