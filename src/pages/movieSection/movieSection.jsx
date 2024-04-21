@@ -19,16 +19,16 @@ export default function MovieSection() {
         <div>
           
             <TitleFS title={"Now Playing"}/>
-            <Movies url={moviesPlayingURL}/>
+            <Movies url={moviesPlayingURL} mediaType="movie"/>
         
             <TitleFS title={"Top Rated Movies"}/>
-            <Movies url={moviesTopRatedURL}/>
+            <Movies url={moviesTopRatedURL} mediaType="movie"/>
 
             <TitleFS title={"Upcoming Movies"}/>
-            <Movies url={moviesUpcomingURL}/>
+            <Movies url={moviesUpcomingURL} mediaType="movie"/>
 
             <TitleFS title={"Popular Movies"}/>
-            <Movies url={moviesPopularURL}/>
+            <Movies url={moviesPopularURL} mediaType="movie"/>
 
         </div>
     ) :

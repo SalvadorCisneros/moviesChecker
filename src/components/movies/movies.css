@@ -125,4 +125,12 @@
     .movie_cast{
         height: 12rem;
     }
+
+    .right_button{
+        display: none;
+    }
+
+    .left_button{
+        display: none;
+    }
   }

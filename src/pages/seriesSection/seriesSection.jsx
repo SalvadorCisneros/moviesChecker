@@ -19,13 +19,13 @@ return (
       <div>
         
           <TitleFS title={"On Air"}/>
-          <Movies url={seriesOnAirURL}/>
+          <Movies url={seriesOnAirURL} mediaType="tv"/>
       
           <TitleFS title={"Top Rated Series"}/>
-          <Movies url={seriesTopRatedURL}/>
+          <Movies url={seriesTopRatedURL} mediaType="tv"/>
 
           <TitleFS title={"Popular Series"}/>
-          <Movies url={seriesPopularURL}/>
+          <Movies url={seriesPopularURL} mediaType="tv"/>
 
 
       </div>

@@ -6,16 +6,17 @@ import back from "../../img/back.png";
 
 
 
-export default function Movies({ url }) {
+export default function Movies({ url, mediaType }) {
   const [data, setData] = useState([]);
   const navigate = useNavigate();
   const mainContainerRef = useRef(null); 
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
 
-  const movieDetails = (media,id) => {
-    navigate(`/${media}/${id}`);
+  const movieDetails = (item) => {
+    navigate(`/${item.media_type || mediaType}/${item.id}`);
   }
+   
 
   const checkScrollPosition = () => {
     if (!mainContainerRef.current) return;
@@ -37,12 +38,12 @@ export default function Movies({ url }) {
 
   const scrollRight = () => {
     if (mainContainerRef.current) {
-      mainContainerRef.current.scrollLeft += 500; // Cambia este valor según cuánto quieras desplazar
+      mainContainerRef.current.scrollLeft += 500;
     }
   }
   const scrollLeft = () => {
     if (mainContainerRef.current) {
-      mainContainerRef.current.scrollLeft += -500; // Cambia este valor según cuánto quieras desplazar
+      mainContainerRef.current.scrollLeft += -500; 
     }
   }
 
@@ -57,9 +58,9 @@ export default function Movies({ url }) {
 
     fetch(url, options)
       .then(response => response.json())
-      .then(response => setData(response.results)) // Asumiendo que los datos que quieres están en "results"
+      .then(response => setData(response.results)) 
       .catch(err => console.error(err));
-  }, [url]);  // Agrega url como dependencia
+  }, [url]);
 
 
 
@@ -71,12 +72,12 @@ export default function Movies({ url }) {
       {data && data.map((item, index) => (
         <div key={index} className='movie_cast'>
           {item.poster_path ? (
-            <img className='movie' src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} onClick={() => movieDetails(item.media_type,item.id)} alt={item.title || item.name}/>
+            <img className='movie' src={`https://image.tmdb.org/t/p/w500${item.poster_path}`} onClick={() => movieDetails(item)} alt={item.title || item.name}/>
           ) : (
             null
           )}
         </div>
-      ))}
+))}
       </div>
       {!isAtEnd && <button className='right_button' onClick={scrollRight}> <img src={next} alt="" />  </button>}
     </div>

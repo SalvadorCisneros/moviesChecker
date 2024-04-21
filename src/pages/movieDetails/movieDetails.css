@@ -92,6 +92,11 @@
     
 }
 
+.overview_container p{
+    height: 100px;
+    overflow: hidden;
+}
+
 
 
 .video_container{
